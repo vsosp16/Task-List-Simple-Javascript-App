@@ -1,14 +1,21 @@
 const addTaskButton = document.getElementById("add-task-btn");
 const taskInput = document.getElementById("task-input");
 
-addTaskButton.addEventListener("click", function() {
-    // console.log("click is working.");
-    let newTaskValue = taskInput.value;
-    let newtaskItem = document.createElement("li");
-    newtaskItem.classList.add("tasklist-item");
-    
-    newtaskItem.appendChild(document.createTextNode(newTaskValue)); //this is a way
-    // newtaskItem.innerHTML = taskInput.value; //this is another way
-    document.querySelector("ul").appendChild(newtaskItem);
+const addTaskItem = () => {
+    if (taskInput.length > 0) {
+        let newtaskItem = document.createElement("li");
+        newtaskItem.classList.add("tasklist-item");
+        newtaskItem.appendChild(document.createTextNode(taskInput.value));
+        document.querySelector("ul").appendChild(newtaskItem);
+        taskInput.value = "";
+    }
+}
 
+addTaskButton.addEventListener("click", addTaskItem);
+taskInput.addEventListener("keypress", function(e) {
+    
+    if (e.key === "Enter") {
+        console.log(e.key);
+        addTaskItem();
+    }
 });
