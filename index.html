@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        html {
+            font: 1em sans-serif;
+        }
+
+        body {
+            margin: 0 auto;
+            max-width: 50vw;
+            padding: 10px;
+            background: aliceblue;
+        }
+
+        button,
+        form,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        section {
+            background: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="description">
+        <h1>Alışveriş Listesi</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga deleniti explicabo laudantium deserunt. Fuga
+            quas fugit repellat harum debitis beatae expedita quasi itaque ipsa laudantium deleniti, natus voluptates,
+            veniam atque!</p>
+    </section>
+    <section class="tasklist-section">
+        <input id="task-input" type="text">
+        <button id="add-task-btn" placeholder="Add a new task." type="submit">Enter</button>
+        <ul class="tasklist-ul">
+            <li class="tasklist-item">Sample Task</li>
+        </ul>
+    </section>
+
+    <script src="tasklist.js"></script>
+</body>
+
+</html>
