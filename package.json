@@ -1,0 +1,24 @@
+{
+  "name": "simple-javascript-to-do-list",
+  "version": "1.0.0",
+  "description": "Just a simple to do list app",
+  "main": "tasklist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsosp16/simple-Javascript-to-do-list.git"
+  },
+  "keywords": [
+    "to",
+    "do",
+    "list"
+  ],
+  "author": "vsosp16",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsosp16/simple-Javascript-to-do-list/issues"
+  },
+  "homepage": "https://github.com/vsosp16/simple-Javascript-to-do-list#readme"
+}
