@@ -21,3 +21,12 @@ section {
     background: white;
     padding: 10px;
 }
+
+@media only screen and (max-width: 600px){
+    body {
+        margin: 0 auto;
+        max-width: 90vw;
+        padding: 10px;
+        background: aliceblue;
+    }
+}
