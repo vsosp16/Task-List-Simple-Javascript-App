@@ -43,6 +43,10 @@ section {
     transition-property: transform, opacity, height, padding, margin;
     transition-timing-function: ease-in;
 }
+.tasklist-item.checked {
+    color: #5e6c84;
+    text-decoration: line-through;
+}
 
 .tasklist-item-checkbox {
     background-color: #fafbfc;
@@ -69,6 +73,20 @@ li.tasklist-item.checked .tasklist-item-checkbox {
     opacity: 1;
     background-size: 16px 16px;
     box-shadow: 0 0 5px #4faf4c;
+}
+span.delete {
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+    padding: 0 3px;
+    background: #ffbebe;
+    border-radius: 3px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transform: scale(1.7, 1.22);
+    cursor: pointer;
+    user-select: none;
 }
 
 #add-task-btn {
