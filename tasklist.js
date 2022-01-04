@@ -47,10 +47,9 @@ const checkTaskItem = (e) => {
     //Here we will remove the item if the X mark clicked.
     //event Target in parentı
     tarParent = target.parentNode;
-    if(target.classList.contains("delete")
-    ){
+    if (target.classList.contains("delete")
+    ) {
         tarParent.remove();
-        
     }
 }
 
