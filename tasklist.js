@@ -38,10 +38,10 @@ const checkTaskItem = (e) => {
     const target = e.target;
     // targetTagName = target.textContent || target.innerText;
     targetTagName = target.tagName;
-    console.log(targetTagName);
+    // console.log(targetTagName);
     if (targetTagName === "SPAN" && !target.classList.contains("delete")) {
         target.parentElement.classList.toggle("checked");
-        console.log("checked");
+        // console.log("checked");
     }
 
     //Here we will remove the item if the X mark clicked.
