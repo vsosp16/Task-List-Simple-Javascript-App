@@ -61,7 +61,7 @@ section {
     text-align: center;
     top: 50%;
     transform: translate(-150%, -50%);
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
     white-space: nowrap;
 }
 .tasklist-itemreal-checkbox {
@@ -78,7 +78,7 @@ section {
     text-align: center;
     top: 50%;
     transform: translate(-150%, -50%);
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
     white-space: nowrap;
 }
 
