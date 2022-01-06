@@ -42,6 +42,9 @@ section {
     transition-property: transform, opacity, height, padding, margin;
     transition-timing-function: ease-in;
 }
+.tasklist-item:hover {
+    background: rgb(227 236 243);
+}
 .tasklist-item.checked {
     color: #5e6c84;
     text-decoration: line-through;
@@ -64,6 +67,7 @@ section {
     /* transition: all .2s ease-in-out; */
     white-space: nowrap;
     background-size: 0px;
+    user-select: none;
 }
 .tasklist-itemreal-checkbox {
     background-color: #fafbfc;
@@ -95,18 +99,95 @@ li.tasklist-item.checked .tasklist-item-checkbox {
 
 span.delete {
     font-family: inherit;
-    font-size: inherit;
-    color: black;
-    padding: 0 3px;
+    font-weight: bold;
     background: #ffbebe;
+    user-select: none;
+    font-size: 14px;
+    line-height: 20px;
+    top: -1px;
+    color: black;
+    padding: 0 6px;
     border-radius: 3px;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    transform: scale(1.7, 1.22);
+    position: relative;
+    float: right;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+span.edit-item {
+    font-size: 14px;
+    line-height: 20px;
+    top: -1px;
+    color: black;
+    padding: 0 4px;
+    background: #beffe4;
+    border-radius: 3px;
+    position: relative;
+    float: right;
     cursor: pointer;
     user-select: none;
 }
+span.save-item {
+    font-family: inherit;
+    font-weight: bold;
+    background: #fff5f5;
+    user-select: none;
+    font-size: 14px;
+    line-height: 20px;
+    top: -1px;
+    color: black;
+    padding: 0 6px;
+    border-radius: 3px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tasklist-item:hover span:not(.tasklist-item-checkbox), .tasklist-item:focus span:not(.tasklist-item-checkbox) {
+    visibility: visible;
+}
+.tasklist-item span:not(.tasklist-item-checkbox) {
+    visibility: hidden;
+}
+/* Dragula Ghost Style */
+.gu-mirror{
+    list-style: none;
+}
+
+
+/*icon css*/
+@font-face {
+    font-family: 'pen';
+    src:
+      url('fonts/pen.ttf?n3bbu') format('truetype'),
+      url('fonts/pen.woff?n3bbu') format('woff'),
+      url('fonts/pen.svg?n3bbu#pen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .icon,.icon::after,.icon::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pen';
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-pencil:before {
+    content: "\e905";
+  }
+/* icon css */
+
 
 #add-task-btn {
     background-color: #f0f8ff;
